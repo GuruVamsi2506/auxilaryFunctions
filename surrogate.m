@@ -1,5 +1,5 @@
 function [surr,varargout] = surrogate(signal,N,varargin)
-
+%Calculates Surrogates for a given time series and yields matrix of signals
 [m,L]=size(signal);
 if L==1, signal=(signal(:))'; [m,L]=size(signal); end %correct if not string
 
