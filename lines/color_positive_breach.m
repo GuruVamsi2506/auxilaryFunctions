@@ -1,4 +1,4 @@
-function [] = color_positive_breach(line_base,line_up, line_down, varargin)
+function [] = color_positive_breach(h,line_base,line_up, line_down, varargin)
 %COLOR_POSITIVE_OVERFLOW Colors the breach above a particular line
 %   Plots polygons to color the positive breach in a plot
 %   use flipped if you're flipping the axes
@@ -36,9 +36,9 @@ while i < L
         x = [x,fliplr(x)];
         
         if flipped == 0
-            patch(x,y,rgb(color),'FaceAlpha',.5);
+            patch(h,x,y,rgb(color),'FaceAlpha',.5);
         else
-            patch(y,x,rgb(color),'FaceAlpha',.5);
+            patch(h,y,x,rgb(color),'FaceAlpha',.5);
         end
         x = [];
         y_up = [];
